@@ -1,17 +1,27 @@
-let str = ""
-resources.map(x => str += `
-    <article>
-    <h2>${x.category}</h2>
-    <p>${x.text}</p>
-    <ul>
-    ${x.sources.map (y => `<li><a href="${y.url}">${y.title}</a></li>`)}
-    </ul>
-    </article>
+let uu = ""
+resources.map(cat => uu += `
+<li onClick="updateContext('${cat.category}')"><a>${cat.category}</a></li>
+`) 
+document.getElementById("headerbox").innerHTML = uu
+
+function updateContext(cur_catagory){
+
+    let p = ""
+
+    resources.map(pre => {
+        if(cur_catagory === pre.category){
+            resources.map(x => p += `
+            <article>
+            <h2>${pre.category}</h2>
+            <p>${pre.text}</p>
+            <ul>${pre.sources.map (y => `<li><a href="${y.url}">${y.title}</a></li>`)}</ul>
+            </article>
 `)
+document.getElementById("infobox").innerHTML = p
+        }
+    })
 
-console.log(resources)
-document.getElementById("infobox").innerHTML = str
-
-function updateContent(){
-    
+    console.log("clicked")
 }
+
+updateContext()
