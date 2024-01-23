@@ -18,6 +18,7 @@ function updateContext(cur_catagory){
             </article>
 `)
 document.getElementById("infobox").innerHTML = p
+
         }
     })
 

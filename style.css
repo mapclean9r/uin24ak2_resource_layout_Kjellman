@@ -45,6 +45,7 @@ nav ul{
     display: flex;
     gap: 1rem;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 nav a {
@@ -62,6 +63,7 @@ nav a:hover {
     background-color: var(--color4);
     color: black;
 }
+
 
 #infobox{
     background-color: var(--color4);
