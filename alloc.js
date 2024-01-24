@@ -1,4 +1,5 @@
 let uu = ""
+
 resources.map(cat => uu += `
 <li onClick="updateContext('${cat.category}')"><a>${cat.category}</a></li>
 `) 
@@ -10,19 +11,20 @@ function updateContext(cur_catagory){
 
     resources.map(pre => {
         if(cur_catagory === pre.category){
-            resources.map(x => p += `
+            p = `
             <article>
             <h2>${pre.category}</h2>
-            <p>${pre.text}</p>
+            <p>${pre.category}</p>
             <ul>${pre.sources.map (y => `<li><a href="${y.url}">${y.title}</a></li>`)}</ul>
             </article>
-`)
+            `
+console.log("clicked")
+console.log(p)
 document.getElementById("infobox").innerHTML = p
-
         }
     })
 
-    console.log("clicked")
+
 }
 
 updateContext()
