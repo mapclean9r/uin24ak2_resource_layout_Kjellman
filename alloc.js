@@ -5,6 +5,8 @@ resources.map(cat => uu += `
 `) 
 document.getElementById("headerbox").innerHTML = uu
 
+
+
 function updateContext(cur_catagory){
 
     let p = ""
@@ -14,7 +16,7 @@ function updateContext(cur_catagory){
             p = `
             <article>
             <h2>${pre.category}</h2>
-            <p>${pre.category}</p>
+            <p>${pre.text}</p>
             <ul>${pre.sources.map (y => `<li><a href="${y.url}">${y.title}</a></li>`)}</ul>
             </article>
             `
