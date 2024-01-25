@@ -68,7 +68,8 @@ nav a:hover {
 #infobox{
     background-color: var(--color4);
     max-width: 100%;
-    padding-left: 30px;
+    padding-left: 60px;
+    padding-right: 10px;
     overflow: auto;
 }
 
