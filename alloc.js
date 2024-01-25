@@ -1,7 +1,7 @@
 let uu = ""
 
 resources.map(cat => uu += `
-<li onClick="updateContext('${cat.category}')"><a>${cat.category}</a></li>
+<li onClick="updateContext('${cat.category}')"><a id=${cat.category}>${cat.category}</a></li>
 `) 
 document.getElementById("headerbox").innerHTML = uu
 
@@ -10,6 +10,7 @@ document.getElementById("headerbox").innerHTML = uu
 function updateContext(cur_catagory){
 
     let p = ""
+    console.log(cur_catagory)
 
     resources.map(pre => {
         if(cur_catagory === pre.category){
@@ -23,10 +24,18 @@ function updateContext(cur_catagory){
 console.log("clicked")
 console.log(p)
 document.getElementById("infobox").innerHTML = p
+
+
         }
     })
+    const allElements = document.querySelectorAll("*")
 
+    allElements.forEach(element => {
+        element.classList.remove("active")
+    });
+
+    document.getElementById(cur_catagory).classList.add("active");
 
 }
 
-updateContext()
+updateContext("HTML")

@@ -89,3 +89,8 @@ nav a:hover {
     margin-bottom: 5rem;
 }
 
+.active {
+    background-color: var(--color4);
+    color: black;
+}
+
