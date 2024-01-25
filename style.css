@@ -54,7 +54,7 @@ nav a {
     padding-left: 3rem;
     padding-right: 3rem;
     color: var(--color4);
-    background-color: #2A324B;
+    background-color: var(--color1);
     text-decoration: none;
     font-weight: bold;
 }
@@ -73,7 +73,7 @@ nav a:hover {
 }
 
 #infobox h2 {
-    color:black;
+    color:var(--color1);
     font-weight: bold;
     margin: 0;
     margin-top: 6rem;
@@ -82,15 +82,17 @@ nav a:hover {
 #infobox p {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: black;
+    font-weight: bold;
+    color: var(--color1);
 }
 
 #infobox ul{
     margin-bottom: 5rem;
+    font-weight: bold;
 }
 
 .active {
     background-color: var(--color4);
-    color: black;
+    color: var(--color1);
 }
 
